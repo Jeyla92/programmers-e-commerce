@@ -1,2 +1,4 @@
 # programmers-e-commerce
-test
+
+Assignment repository.
+Including html, css, js, express, better-sqlite3
