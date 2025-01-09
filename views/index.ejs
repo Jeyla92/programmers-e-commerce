@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header"></header>
+
+    <section class="hero">
+      <div class="carousel">
+        <div class="slide">
+          <img src="images/macbook.jpg" alt="MacBook" />
+          <div class="content">
+            <div class="title">MacBook Pro M2</div>
+            <div class="description">
+              Högpresterande dator med lång batteritid, Retina-skärm och
+              M2-chip. Perfekt för iOS-utveckling och tunga uppgifter. Stilren
+              design, idealisk för utvecklare inom Apple-ekosystemet.
+            </div>
+            <div class="price">Från 34 699.-</div>
+            <div class="buttons">
+              <button class="btn buy-now">Köp nu</button>
+              <button class="btn read-more">Läs mer</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/dell.jpg" alt="Dell XPS" />
+          <div class="content">
+            <div class="title">Dell XPS 17</div>
+            <div class="description">
+              Elegant laptop med kraftfulla processorer och 4K-skärm. Utmärkt
+              för programmering, multitasking och design. Hög prestanda i en
+              premiumbyggd maskin, perfekt för professionella utvecklare.
+            </div>
+            <div class="price">Från 31 995.-</div>
+            <div class="buttons">
+              <button class="btn buy-now">Köp nu</button>
+              <button class="btn read-more">Läs mer</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/lenovo.jpg" alt="Lenovo ThinkPad" />
+          <div class="content">
+            <div class="title">Lenovo ThinkPad X1</div>
+            <div class="description">
+              Ultralätt och robust laptop med ett bekvämt tangentbord. Pålitlig
+              för Linux och företagsutveckling. Lång batteritid och bärbarhet
+              gör den perfekt för programmerare på språng.
+            </div>
+            <div class="price">Från 37 450.-</div>
+            <div class="buttons">
+              <button class="btn buy-now">Köp nu</button>
+              <button class="btn read-more">Läs mer</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/hp.jpg" alt="HP Spectre" />
+          <div class="content">
+            <div class="title">HP Spectre x360</div>
+            <div class="description">
+              2-i-1 laptop med OLED-pekskärm och flexibel design. Kraftfull,
+              stilren och perfekt för programmering och kreativt arbete.
+              Balanserar estetik och funktionalitet med lång batteritid.
+            </div>
+            <div class="price">Från 23 990.-</div>
+            <div class="buttons">
+              <button class="btn buy-now">Köp nu</button>
+              <button class="btn read-more">Läs mer</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/asus.jpg" alt="Asus ROG" />
+          <div class="content">
+            <div class="title">Asus ROG Zephyrus G14</div>
+            <div class="description">
+              Kompakt gaming-laptop med AMD Ryzen 9 och NVIDIA GPU. Utmärkt för
+              spelutveckling, AI och grafikintensiva projekt. Kombination av
+              kraft och portabilitet för kreativa utvecklare.
+            </div>
+            <div class="price">Från 32 490.-</div>
+            <div class="buttons">
+              <button class="btn buy-now">Köp nu</button>
+              <button class="btn read-more">Läs mer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="thumbnails">
+        <img src="images/macbook.jpg" alt="MacBook" class="active" />
+        <img src="images/dell.jpg" alt="Dell XPS" />
+        <img src="images/lenovo.jpg" alt="Lenovo ThinkPad" />
+        <img src="images/hp.jpg" alt="HP Spectre" />
+        <img src="images/asus.jpg" alt="Asus ROG" />
+      </div>
+
+      <div class="arrows">
+        <button id="prev">&#x276E;</button>
+        <button id="next">&#x276F;</button>
+      </div>
+    </section>
+
+    <section class="gallery"></section>
+
+    <section class="section-how">
+      <div class="container">
+        <h2 class="heading-secondary">Välj rätt dator</h2>
+      </div>
+      <div class="container grid grid--2-cols grid--center-v">
+        <!--STEP 1-->
+        <div class="step-text-box">
+          <p class="step-number">01</p>
+          <h3 class="heading-tertiary">Processor (CPU)</h3>
+          <p class="step-description">
+            Detta är hjärtat i din laptop. För programmering behöver du en
+            kraftfull processor för att hantera kompilering, virtualisering och
+            andra krävande uppgifter.
+          </p>
+        </div>
+        <div class="step-img-box">
+          <img src="images/processor.jpg" class="step-img" alt="Processor" />
+        </div>
+
+        <!--STEP 2-->
+        <div class="step-img-box">
+          <img src="images/ram.jpg" class="step-img" alt="Internminne" />
+        </div>
+        <div class="step-text-box">
+          <p class="step-number">02</p>
+          <h3 class="heading-tertiary">Internminne (RAM)</h3>
+          <p class="step-description">
+            RAM påverkar hur smidigt din dator kan köra flera program samtidigt.
+            För de flesta datorer för programmering rekommenderas minst 8 GB
+            RAM, men 16 GB eller mer är att föredra om du arbetar med större
+            projekt.
+          </p>
+        </div>
+
+        <!--STEP 3-->
+        <div class="step-text-box">
+          <p class="step-number">03</p>
+          <h3 class="heading-tertiary">Lagringsutrymme</h3>
+          <p class="step-description">
+            SSD är snabbare och mer pålitliga än HDD. Minst 256 GB
+            rekommenderas, men 512 GB eller mer är bättre om du hanterar stora
+            filer eller många projekt.
+          </p>
+        </div>
+        <div class="step-img-box">
+          <img
+            src="images/lagringsutrymme.jpg"
+            class="step-img"
+            alt="Lagringsutrymme"
+          />
+        </div>
+
+        <!--STEP 4-->
+        <div class="step-img-box">
+          <img src="images/datorskärm.jpg" class="step-img" alt="Skärm" />
+        </div>
+        <div class="step-text-box">
+          <p class="step-number">04</p>
+          <h3 class="heading-tertiary">Skärm</h3>
+          <p class="step-description">
+            En större skärm med hög upplösning gör det lättare att arbeta med
+            kod och flera fönster öppna samtidigt.
+          </p>
+        </div>
+
+        <!--STEP 5-->
+        <div class="step-text-box">
+          <p class="step-number">05</p>
+          <h3 class="heading-tertiary">Batteritid</h3>
+          <p class="step-description">
+            Lång batteritid är viktig om du planerar att arbeta mycket på
+            språng. Sök efter laptops med minst 8 timmars batteritid.
+          </p>
+        </div>
+        <div class="step-img-box">
+          <img src="images/batteri.jpg" class="step-img" alt="Batteritid" />
+        </div>
+
+        <!--STEP 6-->
+        <div class="step-img-box">
+          <img src="images/portar.jpg" class="step-img" alt="Portar" />
+        </div>
+        <div class="step-text-box">
+          <p class="step-number">06</p>
+          <h3 class="heading-tertiary">Portar</h3>
+          <p class="step-description">
+            Se till att datorn har tillräckligt med portar för dina behov, såsom
+            USB-A, USB-C och HDMI.
+          </p>
+        </div>
+
+        <!--STEP 7-->
+        <div class="step-text-box">
+          <p class="step-number">07</p>
+          <h3 class="heading-tertiary">Operativsystem</h3>
+          <p class="step-description">
+            Valet mellan Windows och macOS beror på dina personliga preferenser
+            och vilken typ av utveckling du kommer att göra.
+          </p>
+        </div>
+        <div class="step-img-box">
+          <img
+            src="images/operativsystem.jpg"
+            class="step-img"
+            alt="Operativsystem"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer"></footer>
+    <script src="/javascripts/homepage.js"></script>
+  </body>
+</html>
