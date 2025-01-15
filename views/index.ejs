@@ -5,23 +5,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
+      
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
       nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" 
     ></script>
 
     <link rel="icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>    /* länk till ikoner */
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> /*Länk till font Awesom */
   </head>
+  
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="logo">
+        <h1>Programmers</h1>
+    </div>
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Sök produkter">
+        <ul id="suggestions-list" class="suggestions"></ul>
+        <button id="search-button">Sök</button>
+    </div>
+    <div class="icon-links">
+        <a href="#" class="icon-link">
+            <i class="fa-thin fa-building-magnifying-glass"></i> Hitta butik
+        </a>
+        <a href="#" class="icon-link">
+            <i class="fa-solid fa-right-to-bracket"></i> Logga in
+        </a>
+        <a href="#" class="icon-link">
+            <i class="fa-solid fa-cart-shopping"></i> Kundvagn
+        </a>
+    </div>
+</div>
+  </header>
 
     <section class="hero">
       <div class="carousel">
@@ -233,7 +257,23 @@
       </div>
     </section>
 
-    <footer class="footer"></footer>
+    <footer>
+      <div class="footer-links">
+          <h4>Kundtjänst</h4>
+          <ul>
+              <li><a href="https://www.google.com/">Hitta butik</a></li>
+              <li><a href="https://www.google.com/">Spåra din leverans</a></li>
+              <li><a href="https://www.google.com/">Support</a></li>
+          </ul>
+      </div>
+      <div class="footer-info">
+          <h4>Information</h4>
+          <ul>
+              <li><a href="https://www.google.com/">Leverans</a></li>
+              <li><a href="https://www.google.com/">Marketplace</a></li>
+          </ul>
+      </div>
+  </footer>
     <script src="/javascripts/homepage.js"></script>
   </body>
 </html>

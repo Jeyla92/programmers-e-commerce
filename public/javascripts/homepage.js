@@ -3,8 +3,51 @@ const slides = document.querySelectorAll(".slide");
 const thumbnails = document.querySelectorAll(".thumbnails img");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
+const searchInput = document.getElementById("search-bar"); /* implementera logik för att hantera användarens inmatning och visa relevanta förslag. */
+const suggestionsList = document.getElementById("suggestions-list"); /* implementera logik för att hantera användarens inmatning och visa relevanta förslag. */
 
 let currentIndex = 0;
+ 
+/* Jeyla (sökrutan) */
+const suggestions = [
+  "MacBook Pro M2",
+  "Dell XPS 17",
+  "Lenovo ThinkPad X1",
+  "HP Spectre x360",
+  "Asus ROG Zephyrus G14",
+  "Apple iPhone 15",
+  "Samsung Galaxy S23",
+  "Sony WH-1000XM5",
+  "Bose QuietComfort Earbuds",
+  "Google Pixel 8"
+];     /*exempel på data att söka i */
+
+searchInput.addEventListener("input", function () {
+  const inputValue = searchInput.value.toLowerCase();
+  suggestionsList.innerHTML = ""; // Rensa tidigare förslag
+
+  if (inputValue) {
+      const filteredSuggestions = suggestions.filter(item =>
+          item.toLowerCase().includes(inputValue)
+      );
+
+      filteredSuggestions.forEach(item => {
+          const listItem = document.createElement("li");
+          listItem.textContent = item;
+          listItem.addEventListener("click", () => {
+              searchInput.value = item; // Fyll i sökrutan
+              suggestionsList.innerHTML = ""; // Stäng förslagslistan
+          });
+          suggestionsList.appendChild(listItem);
+      });
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".search-container")) {
+      suggestionsList.innerHTML = "";
+  }
+});
 
 function resetAnimations(slide) {
   const elements = slide.querySelectorAll(".content > *");
