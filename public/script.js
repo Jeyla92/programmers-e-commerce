@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchBar = document.getElementById('search-bar');
     const suggestionsList = document.getElementById('suggestions-list');
+    const shoppingCart = document.getElementById('shopping-cart')
+
     let products = [];
 
     const fetchProducts = () => {
@@ -37,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             suggestionsList.style.display = 'none';
         }
     };
+
+    shoppingCart.addEventListener('click', () => {
+        
+    })
 
     searchBar.addEventListener('input', (event) => {
 

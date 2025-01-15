@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors'); // Importera CORS
+const cors = require('cors');
 const app = express();
 const PORT = 8080;
 
@@ -13,25 +13,28 @@ let products = [
 ];
 
 // Middleware
-app.use(cors()); // Aktivera CORS
-app.use(express.static('public')); // Serve static files
-app.use(express.json()); // Parse JSON requests
+app.use(cors());
+app.use(express.static('public'));
+app.use(express.json());
 
-// Get products with optional search query
+// Hämta alla produkter
 app.get('/api/products', (req, res) => {
-    const searchQuery = req.query.q;
-    if (searchQuery) {
-        const filteredProducts = products.filter(product =>
-            product.name.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-        res.json(filteredProducts);
-    } else {
-        console.log(products)
-        res.json(products);
-    }
+    res.json(products);
 });
 
-// Start the server
+// Hämta en specifik produkt
+app.get('/api/products/:id', (req, res) => {
+    const productId = parseInt(req.params.id);
+    const product = products.find(p => p.id === productId);
+
+    if (!product) {
+        return res.status(404).json({ error: 'Produkt inte hittad' });
+    }
+
+    res.json(product);
+});
+
+// Starta servern
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
