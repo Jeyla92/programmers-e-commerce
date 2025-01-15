@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="/stylesheets/search.css" />
+  </head>
+<body>
+  <header class="header"></header>
+
+
+  <!-- Hamburgermenyknapp -->
+     <button id="hamburger-btn" aria-label="Toggle menu">☰</button>
+    <div class="sidebar">
+      <form id="filter-form">
+        <h3 class="heading-tertiary">Filtrera efter</h3>
+        <!-- Märken (Brand) -->
+        <div class="filter-group">
+          <label class="brand">Märke</label>
+          <div>
+            <label>
+              <input type="checkbox" name="brand" value="apple" /> Apple
+            </label>
+            <label>
+              <input type="checkbox" name="brand" value="samsung" /> Samsung
+            </label>
+            <label>
+              <input type="checkbox" name="brand" value="dell" /> Dell
+            </label>
+            <label>
+              <input type="checkbox" name="brand" value="microsoft" />
+              Microsoft
+            </label>
+            <label>
+              <input type="checkbox" name="brand" value="asus" /> Asus
+            </label>
+            <label>
+              <input type="checkbox" name="brand" value="lenovo" /> Lenovo
+            </label>
+            <label>
+              <input type="checkbox" name="brand" value="hp" /> Hp
+            </label>
+            <label>
+              <input type="checkbox" name="brand" value="acer" /> Acer
+            </label>
+          </div>
+        </div>
+
+        <!-- Pris (Price) -->
+        <div class="filter-group">
+          <label class="price">Pris</label>
+          <select id="price-filter" name="price">
+            <option value="all">Alla</option>
+            <option value="low">Under 10 000</option>
+            <option value="mid">10 000 - 20 000</option>
+            <option value="high">Över 20 000</option>
+          </select>
+        </div>
+
+        <!-- Färg (Color) -->
+        <div class="filter-group">
+          <label class="color">Färg</label>
+          <div>
+            <label>
+              <input type="checkbox" name="color" value="black" /> Svart
+            </label>
+            <label>
+              <input type="checkbox" name="color" value="silver" /> Silver
+            </label>
+            <label>
+              <input type="checkbox" name="color" value="white" /> Vit
+            </label>
+            <label>
+              <input type="checkbox" name="color" value="gold" /> Guld
+            </label>
+            <label>
+              <input type="checkbox" name="color" value="blue" /> Blå
+            </label>
+          </div>
+        </div>
+        <form>
+          <button type="submit" class="apply-filters">Använd filter</button>
+        </form>
+    </div>
+
+    <section class="search-gallery"></section>
+
+    <footer class="footer"></footer>
+    <script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+const sidebar = document.querySelector('.sidebar');
+
+// Lägg till klickhändelse
+hamburgerBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('open'); // Lägg till/ta bort klassen "open"
+});
+    </script>
+</body>
+</html>
