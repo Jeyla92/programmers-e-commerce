@@ -23,7 +23,27 @@
     <link rel="stylesheet" href="/stylesheets/search.css" />
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="logo">
+          <h1>Programmers</h1>
+      </div>
+      <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Sök produkter">
+          <button id="search-button">Sök</button>
+          <ul id="suggestions-list" class="suggestions"></ul>
+      </div>
+      <div class="icon-links">
+          <a href="#" class="icon-link">
+              <i class="fas fa-store"></i> Hitta butik
+          </a>
+          <a href="#" class="icon-link">
+              <i class="fas fa-sign-in-alt"></i> Logga in
+          </a>
+          <a href="#" class="icon-link">
+              <i class="fas fa-shopping-cart"></i> Kundvagn
+          </a>
+      </div>
+  </header>
 
     <div class="sidebar">
       <button id="hamburger-btn">☰</button>
@@ -99,7 +119,23 @@
 
     <section class="search-gallery"></section>
 
-    <footer class="footer"></footer>
+    <footer>
+      <div class="footer-links">
+          <h4>Kundtjänst</h4>
+          <ul>
+              <li><a href="https://www.google.com/">Hitta butik</a></li>
+              <li><a href="https://www.google.com/">Spåra din leverans</a></li>
+              <li><a href="https://www.google.com/">Support</a></li>
+          </ul>
+      </div>
+      <div class="footer-info">
+          <h4>Information</h4>
+          <ul>
+              <li><a href="https://www.google.com/">Leverans</a></li>
+              <li><a href="https://www.google.com/">Marketplace</a></li>
+          </ul>
+      </div>
+  </footer>
     <script src="/javascripts/search.js"></script>
   </body>
 </html>
