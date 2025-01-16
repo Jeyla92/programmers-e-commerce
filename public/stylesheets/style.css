@@ -58,13 +58,83 @@ body {
   line-height: 1.2;
   margin-bottom: 3.2rem;
 }
-/**************************/
-/* HEADER & NAV BAR  */
-/**************************/
 
-/**************************/
-/* HERO  */
-/**************************/
+
+/* CSS till sökrutan förslaglistan */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #eee;
+}
+
+header {
+  background-color: #cce4f6;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #bbb;
+}          /* Jeyla */
+
+header .logo h1 {
+  font-size: 2rem;
+  color: #34516d;
+}              /* Jeyla */
+
+header .search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}  /* Jeyla */
+
+header .search-container input {
+  padding: 5px 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}   /* Jeyla */
+
+header .search-container button {
+  background-color: #34516d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}          /* Jeyla */
+
+header .icon-links {
+  display: flex;
+  gap: 15px;
+}       /* Jeyla */
+
+header .icon-links .icon-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}      /* Jeyla */
+
+header .icon-links .icon-link i {
+  margin-right: 5px;
+} /* Jeyla */
+
+
 .hero {
   position: relative;
   width: 100vw;
@@ -277,6 +347,45 @@ body {
 .step-img {
   width: 35%;
 }
-/*********************************/
+
 /* FOOTER */
-/*********************************/
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-top: 2px solid #bbb;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+footer .footer-links,
+footer .footer-info {
+  flex: 1;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #000;
+}
