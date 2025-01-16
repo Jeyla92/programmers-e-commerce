@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/**************************/
+/* GENERAL */
+/**************************/
+
+/**************************/
+/* HEADER & NAV BAR  */
+/**************************/
+
+/**************************/
+/* Product */
+/**************************/
+
+/**************************/
+/* SLIDESHOW */
+/**************************/
+
+/**************************/
+/* REVIEW */
+/**************************/
+.review {
+  background-image: url("../images/background1.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.container__left h1 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #333;
+}
+
+.container__left p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.stars-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #ffca28;
+}
+
+.container__right {
+  display: grid;
+  gap: 1rem;
+}
+
+.customers {
+  padding: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.customers img {
+  max-width: 75px;
+  border-radius: 100%;
+}
+
+.custom {
+  display: flex;
+  gap: 1rem;
+}
+
+.custom-details p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.custom-details h4 {
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+}
+
+/**************************/
+/* Footer */
+/**************************/
+
+/**************************************************/
+/* MEDIA QUERIES */
+/**************************************************/
+/*********************************/
+/* BELOW 944px (IPAD) */
+/*********************************/
+@media (max-width: 944px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container__right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*********************************/
+/* BELOW 544px (IPHONE) */
+/*********************************/
+@media (max-width: 544px) {
+  .container__right {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container__left h1 {
+    font-size: 3rem;
+  }
+}
