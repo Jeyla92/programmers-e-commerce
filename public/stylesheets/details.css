@@ -1,6 +1,5 @@
 * {
   padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -10,17 +9,142 @@ body {
   font-weight: 400;
 }
 
-/**************************/
-/* GENERAL */
-/**************************/
+header {
+  background-color: #cce4f6;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #bbb;
+}
 
-/**************************/
-/* HEADER & NAV BAR  */
-/**************************/
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
-/**************************/
-/* Product */
-/**************************/
+.logo h1 {
+  margin: 0;
+  color: #003366;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#search-bar {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+#search-button {
+  padding: 8px 12px;
+  background-color: #005eb8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icon-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: #003366;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+
+
+
+
+.nav-länkar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-länkar li {
+  margin-left: 15px;
+}
+
+.nav-länkar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-länkar a:hover {
+  text-decoration: underline;
+}
+
+/.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produkt-info img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333;
+}
+
+.pris {
+  font-size: 1.5em;
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
+.beskrivning {
+  margin: 15px 0;
+}
+
+.specifikationer ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.alternativ {
+  margin: 20px 0;
+}
+
+button {
+  background-color: #0071e3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
 
 /**************************/
 /* SLIDESHOW */
@@ -108,9 +232,32 @@ body {
   color: #000;
 }
 
-/**************************/
-/* Footer */
-/**************************/
+footer {
+  background-color: lightskyblue;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+}
+
+.footer-länkar {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.footer-länkar li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-länkar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-länkar a:hover {
+  text-decoration: underline;
+}
 
 /**************************************************/
 /* MEDIA QUERIES */
