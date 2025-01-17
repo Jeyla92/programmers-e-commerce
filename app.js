@@ -9,6 +9,7 @@ const usersRouter = require("./routes/users");
 const detailsRouter = require("./routes/details");
 const searchRouter = require("./routes/search");
 const getProductsApi = require("./routes/api/getProductsApi");
+const postFilteringApi = require("./routes/api/postFilteringApi");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use("/users", usersRouter);
 app.use("/details", detailsRouter);
 app.use("/search", searchRouter);
 app.use("/api", getProductsApi);
+app.use("/api", postFilteringApi);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
