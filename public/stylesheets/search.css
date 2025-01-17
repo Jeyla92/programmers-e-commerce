@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+/**************************/
+/* HEADER & NAV */
+/**************************/
 header {
   background-color: #cce4f6;
   padding: 10px 20px;
@@ -64,15 +67,13 @@ header {
   gap: 5px;
 }
 
-
-
 /**************************/
 /* SIDEBAR */
 /**************************/
 .sidebar {
   width: 250px;
-  height: 80vh;
-  background-color: #a3b0bb;
+  height: 110vh;
+  background-color: #2d3b47;
   color: #fff;
   padding: 1rem;
   position: sticky;
@@ -96,6 +97,7 @@ header {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
+  display: block;
   color: #fff;
 }
 
@@ -142,33 +144,49 @@ header {
 /* SEARCH GALLERY */
 /**************************/
 
+/**************************/
+/* FOOTER */
+/**************************/
 footer {
-  background-color: lightskyblue;
-  color: #fff;
-  text-align: center;
-  padding: 15px 20px;
+  background-color: #f1f1f1;
+  margin-left: 250px;
+  padding: 20px;
+  border-top: 2px solid #bbb;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.footer-länkar {
+footer .footer-links {
+  flex: 1;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+footer ul {
   list-style: none;
-  margin: 10px 0 0;
   padding: 0;
 }
 
-.footer-länkar li {
-  display: inline;
-  margin: 0 10px;
+footer ul li {
+  margin-bottom: 5px;
 }
 
-.footer-länkar a {
+footer ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #555;
+  transition: color 0.3s;
 }
 
-.footer-länkar a:hover {
-  text-decoration: underline;
+footer ul li a:hover {
+  color: #000;
 }
-
 /**************************************************/
 /* MEDIA QUERIES */
 /**************************************************/
@@ -178,7 +196,7 @@ footer {
 @media (max-width: 944px) {
   .sidebar {
     width: 200px;
-    height: 70vh;
+    height: 100vh;
     font-size: 0.9rem;
   }
 
@@ -203,7 +221,6 @@ footer {
   .sidebar {
     position: fixed;
     height: 100vh;
-    width: 200px;
   }
 
   .sidebar.open {
@@ -213,7 +230,7 @@ footer {
   #hamburger-btn {
     display: block;
     position: fixed;
-    top: 1rem;
+    top: 3rem;
     left: 1rem;
     z-index: 1100;
     font-size: 2rem;
@@ -230,6 +247,5 @@ footer {
 
   .heading-tertiary {
     font-size: 1.5rem;
-    margin-top: 3rem;
   }
 }

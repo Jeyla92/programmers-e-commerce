@@ -1,5 +1,6 @@
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -9,6 +10,13 @@ body {
   font-weight: 400;
 }
 
+/**************************/
+/* GENERAL */
+/**************************/
+
+/**************************/
+/* HEADER & NAV BAR  */
+/**************************/
 header {
   background-color: #cce4f6;
   padding: 10px 20px;
@@ -68,83 +76,9 @@ header {
   align-items: center;
   gap: 5px;
 }
-
-
-
-
-
-
-
-.nav-länkar {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-länkar li {
-  margin-left: 15px;
-}
-
-.nav-länkar a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.nav-länkar a:hover {
-  text-decoration: underline;
-}
-
-/.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.produkt-info img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-h2 {
-  color: #333;
-}
-
-.pris {
-  font-size: 1.5em;
-  color: #e74c3c;
-  margin-top: 10px;
-}
-
-.beskrivning {
-  margin: 15px 0;
-}
-
-.specifikationer ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-
-.alternativ {
-  margin: 20px 0;
-}
-
-button {
-  background-color: #0071e3;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #005bb5;
-}
+/**************************/
+/* Product */
+/**************************/
 
 /**************************/
 /* SLIDESHOW */
@@ -232,33 +166,49 @@ button:hover {
   color: #000;
 }
 
+/**************************/
+/* Footer */
+/**************************/
 footer {
-  background-color: lightskyblue;
-  color: #fff;
-  text-align: center;
-  padding: 15px 20px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-top: 2px solid #bbb;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.footer-länkar {
+footer .footer-links,
+footer .footer-info {
+  flex: 1;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+footer ul {
   list-style: none;
-  margin: 10px 0 0;
   padding: 0;
 }
 
-.footer-länkar li {
-  display: inline;
-  margin: 0 10px;
+footer ul li {
+  margin-bottom: 5px;
 }
 
-.footer-länkar a {
+footer ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #555;
+  transition: color 0.3s;
 }
 
-.footer-länkar a:hover {
-  text-decoration: underline;
+footer ul li a:hover {
+  color: #000;
 }
-
 /**************************************************/
 /* MEDIA QUERIES */
 /**************************************************/
