@@ -133,8 +133,85 @@ button:hover {
 }
 
 /**************************/
+/*/**********************************************************************MORGAN */
 /* SLIDESHOW */
-/**************************/
+.slideshow-container {
+  position: relative;
+  max-width: 90rem; /* Minska maxbredd för mer utrymme på sidorna */
+  margin: 0 auto; /* Centrerar hela slideshowen */
+  padding: 0 1rem; /* Lägger till marginaler från vänster och höger */
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem; /* Extra utrymme inuti griden */
+}
+
+.grid-item img {
+  width: 100%; /* Bilden fyller hela bredden av sin behållare */
+  height: 20rem; /* Fast höjd för att hålla ramen konsekvent */
+  object-fit: cover; /* Anpassa bilden till ramen och klipp bort överskott */
+  display: block; /* Se till att bilder visas som blockelement */
+  border-radius: 0.5rem; /* Ger rundade hörn för estetisk layout */
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Justerat till mitten */
+  transform: translateY(-50%); /* Gör att knapparna centreras vertikalt */
+  padding: 1.6rem;
+  color: white;
+  transition: 0.3s ease;
+  background-color: #555;
+  text-decoration: none;
+}
+
+.prev {
+  left: 2rem; /* Flytta knapparna inåt för att matcha marginalerna */
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.next {
+  right: 2rem; /* Flytta knapparna inåt för att matcha marginalerna */
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #333333;
+}
+
+.slide:target {
+  display: block;
+}
+
+.top {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  text-align: center; /* Justera texten till mitten */
+}
+
+.top-price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem; /* Mindre avstånd till övrigt innehåll */
+  text-align: center; /* Justera priset till mitten */
+}
+
+
+
+
+/************************************************************************MORGAN */
 
 /**************************/
 /* REVIEW */
