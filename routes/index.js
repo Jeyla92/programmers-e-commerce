@@ -16,7 +16,8 @@ router.get("/", function (req, res, next) {
                image,
                published_date,
                url_slug
-        FROM products LIMIT 9 
+        FROM products
+        ORDER BY RANDOM() LIMIT 9 
     `;
 
   try {

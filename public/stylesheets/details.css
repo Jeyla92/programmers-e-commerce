@@ -33,11 +33,12 @@ header {
   width: 100%;
 }
 
-.logo h1 {
+.logo h1 a {
   margin: 0;
   color: #003366;
   font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .search-container {
@@ -140,13 +141,12 @@ button {
 }
 
 /**************************/
-/*/**********************************************************************MORGAN */
 /* SLIDESHOW */
 .slideshow-container {
   position: relative;
-  max-width: 90rem; /* Minska maxbredd för mer utrymme på sidorna */
-  margin: 0 auto; /* Centrerar hela slideshowen */
-  padding: 0 1rem; /* Lägger till marginaler från vänster och höger */
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1rem;
   overflow: hidden;
   margin-top: 3rem;
 }
@@ -163,11 +163,11 @@ button {
 }
 
 .grid-item img {
-  width: 100%; /* Bilden fyller hela bredden av sin behållare */
-  height: 20rem; /* Fast höjd för att hålla ramen konsekvent */
-  object-fit: cover; /* Anpassa bilden till ramen och klipp bort överskott */
-  display: block; /* Se till att bilder visas som blockelement */
-  border-radius: 0.5rem; /* Ger rundade hörn för estetisk layout */
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
 }
 
 .prev,
@@ -175,7 +175,7 @@ button {
   cursor: pointer;
   position: absolute;
   top: 42%;
-  transform: translateY(-50%); /* Gör att knapparna centreras vertikalt */
+  transform: translateY(-50%);
   color: rgb(18, 0, 118);
   transition: 0.3s ease;
   background-color: transparent;
@@ -183,13 +183,13 @@ button {
 }
 
 .prev {
-  left: 0; /* Flytta knapparna inåt för att matcha marginalerna */
+  left: 0;
   border-radius: 45%;
   font-size: 3rem;
 }
 
 .next {
-  right: 0; /* Flytta knapparna inåt för att matcha marginalerna */
+  right: 0;
   border-radius: 45%;
   font-size: 3rem;
 }
@@ -201,17 +201,15 @@ button {
 .top {
   font-size: 1.6rem;
   margin-top: 1rem;
-  text-align: center; /* Justera texten till mitten */
+  text-align: center;
 }
 
 .top-price {
   font-size: 1.6rem;
   font-weight: 500;
-  margin-bottom: 2rem; /* Mindre avstånd till övrigt innehåll */
-  text-align: center; /* Justera priset till mitten */
+  margin-bottom: 2rem;
+  text-align: center;
 }
-
-/************************************************************************MORGAN */
 
 /**************************/
 /* REVIEW */
@@ -351,6 +349,26 @@ footer ul li a:hover {
 
   .container__right {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .slideshow-container {
+    max-width: 80rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    padding: 0 3.2rem;
+  }
+
+  .grid-item img {
+    width: 90%;
+    height: auto;
+  }
+
+  .prev,
+  .next {
+    top: 30%;
+    padding: 1rem;
   }
 }
 
