@@ -28,3 +28,6 @@ Populera databasen med information:
 - Sedan kör följande kommando i terminalen:
   node db/utilities/populate-db.js
   (detta görs för att automatisera processen och undvika det manuella arbetet med att lägga in data i databasen)
+
+
+http://localhost:3000/

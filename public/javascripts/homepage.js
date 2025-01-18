@@ -90,3 +90,28 @@ prevButton.addEventListener("click", showPrev);
 
 // Auto-slide every 5 seconds
 setInterval(showNext, 5000);
+
+
+//*****************************************************************************MORGAN
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cartButtons = document.querySelectorAll('.add-to-cart');
+
+  cartButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+          if (button.classList.contains('added')) {
+              // Om produkten redan är i varukorgen, ta bort den
+              button.textContent = 'Lägg i varukorg';
+              button.classList.remove('added');
+          } else {
+              // Lägg till produkten i varukorgen
+              button.textContent = 'Tillagd i varukorg';
+              button.classList.add('added');
+          }
+      });
+  });
+});
+
+
+
+//*****************************************************************************MORGAN

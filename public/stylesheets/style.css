@@ -59,13 +59,8 @@ body {
   margin-bottom: 3.2rem;
 }
 
-
 /* CSS till sökrutan förslaglistan */
 .suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
   background: #fff;
   border: 1px solid #ccc;
   max-height: 150px;
@@ -92,24 +87,24 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #bbb;
-}          /* Jeyla */
+} /* Jeyla */
 
 header .logo h1 {
   font-size: 2rem;
   color: #34516d;
-}              /* Jeyla */
+} /* Jeyla */
 
 header .search-container {
   display: flex;
   align-items: center;
   gap: 10px;
-}  /* Jeyla */
+} /* Jeyla */
 
 header .search-container input {
   padding: 5px 10px;
   border: 1px solid #bbb;
   border-radius: 5px;
-}   /* Jeyla */
+} /* Jeyla */
 
 header .search-container button {
   background-color: #34516d;
@@ -117,23 +112,22 @@ header .search-container button {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-}          /* Jeyla */
+} /* Jeyla */
 
 header .icon-links {
   display: flex;
   gap: 15px;
-}       /* Jeyla */
+} /* Jeyla */
 
 header .icon-links .icon-link {
   text-decoration: none;
   color: #333;
   font-size: 0.9rem;
-}      /* Jeyla */
+} /* Jeyla */
 
 header .icon-links .icon-link i {
   margin-right: 5px;
 } /* Jeyla */
-
 
 .hero {
   position: relative;
@@ -290,7 +284,132 @@ header .icon-links .icon-link i {
 
 /**************************/
 /* GALLERY  */
-/**************************/
+/**********************************************************************MORGAN */
+
+/* Galleri layout */
+.galleri {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: start;
+  margin-top: 30px;
+}
+
+@media (min-width: 420px) and (max-width: 499px) {
+  .galleri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 500px) /*and (max-width: 800px) */ {
+  .galleri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0px;
+}
+
+.product p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.titel {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.pris {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Badge */
+.product .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #727df7;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+/* Add-to-cart button */
+.add-to-cart {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #6a35cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #56389e;
+}
+
+.add-to-cart.added {
+  background-color: #727df7;
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+  padding-top: 3.2rem;
+  margin-bottom: 10rem;
+}
+
+.feature-icon {
+  color: #34516d;
+  height: 2rem;
+  width: 2rem;
+  padding: 1.6rem;
+}
+
+.feature-title {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+
+.feature {
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+/**********************************************************************MORGAN */
 
 /**************************/
 /* CHOOSE */
