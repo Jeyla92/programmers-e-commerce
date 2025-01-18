@@ -70,17 +70,24 @@ header {
 /**************************/
 /* SIDEBAR */
 /**************************/
+
+/* Huvudlayout */
+.main-layout {
+  display: flex; /* Flexbox för att organisera horisontellt */
+  align-items: stretch; /* Tvinga både sidebar och galleri att ha samma höjd */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidofält */
 .sidebar {
   width: 250px;
-  height: 110vh;
   background-color: #2d3b47;
-  color: #fff;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  left: -100%;
-  transition: left 0.3s ease;
-  z-index: 1000;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* För att säkerställa att innehållet staplas */
 }
 
 .heading-tertiary {
@@ -143,6 +150,83 @@ header {
 /**************************/
 /* SEARCH GALLERY */
 /**************************/
+/**************************/
+/* GALLERY  */
+/**********************************************************************MORGAN */
+
+
+/* Galleri layout */
+/* Galleri */
+.search-gallery {
+  flex: 1; /* Ta upp allt tillgängligt horisontellt utrymme */
+  display: flex;
+  flex-direction: column; /* Se till att innehållet är vertikalt arrangerat */
+}
+
+.galleri {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolumner */
+  gap: 20px;
+  flex: 1; /* Fyll ut höjden för att matcha sidofältet */
+}
+
+.product {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 150px; /* Fast bredd */
+  height: 150px; /* Fast höjd */
+  object-fit: cover; /* Bevara proportioner och klipp */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.price {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+
+
+/* Badge */
+.product .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #85d7f2;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+/**********************************************************************MORGAN */
 
 /**************************/
 /* FOOTER */
