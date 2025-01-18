@@ -80,7 +80,7 @@ header {
 /* Product */
 /**************************/
 
-.container {
+.container-produkt {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -95,27 +95,38 @@ header {
 }
 
 h2 {
+  margin-top: 4rem;
+  font-size: 3em;
+  margin-left: 1rem;
   color: #333;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .pris {
   font-size: 1.5em;
   color: rgb(73, 2, 73);
-  margin-top: 10px;
+  margin-top: 20px;
   font-weight: bold;
 }
 
 .beskrivning {
   margin: 15px 0;
+  font-size: 20px;
 }
 
 .specifikationer ul {
   list-style: disc;
   margin-left: 20px;
+  font-size: 17px;
 }
 
 .alternativ {
   margin: 20px 0;
+  font-size: 20px;
 }
 
 button {
@@ -128,10 +139,6 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
-  background-color: #005bb5;
-}
-
 /**************************/
 /*/**********************************************************************MORGAN */
 /* SLIDESHOW */
@@ -141,6 +148,7 @@ button:hover {
   margin: 0 auto; /* Centrerar hela slideshowen */
   padding: 0 1rem; /* Lägger till marginaler från vänster och höger */
   overflow: hidden;
+  margin-top: 3rem;
 }
 
 .slide {
@@ -162,33 +170,28 @@ button:hover {
   border-radius: 0.5rem; /* Ger rundade hörn för estetisk layout */
 }
 
-
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%; /* Justerat till mitten */
+  top: 42%;
   transform: translateY(-50%); /* Gör att knapparna centreras vertikalt */
-  padding: 1.6rem;
-  color: white;
+  color: rgb(18, 0, 118);
   transition: 0.3s ease;
-  background-color: #555;
+  background-color: transparent;
   text-decoration: none;
 }
 
 .prev {
-  left: 2rem; /* Flytta knapparna inåt för att matcha marginalerna */
-  border-radius: 0 0.3rem 0.3rem 0;
+  left: 0; /* Flytta knapparna inåt för att matcha marginalerna */
+  border-radius: 45%;
+  font-size: 3rem;
 }
 
 .next {
-  right: 2rem; /* Flytta knapparna inåt för att matcha marginalerna */
-  border-radius: 0.3rem 0 0 0.3rem;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: #333333;
+  right: 0; /* Flytta knapparna inåt för att matcha marginalerna */
+  border-radius: 45%;
+  font-size: 3rem;
 }
 
 .slide:target {
@@ -207,9 +210,6 @@ button:hover {
   margin-bottom: 2rem; /* Mindre avstånd till övrigt innehåll */
   text-align: center; /* Justera priset till mitten */
 }
-
-
-
 
 /************************************************************************MORGAN */
 
