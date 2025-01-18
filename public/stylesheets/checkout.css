@@ -23,11 +23,12 @@ header {
   width: 100%;
 }
 
-.logo h1 {
+.logo h1 a {
   margin: 0;
   color: #003366;
   font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .search-container {
@@ -118,7 +119,8 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -193,10 +195,6 @@ textarea {
   font-weight: bold;
   margin-top: 20px;
 }
-
-
-
-
 
 /****************************************************************MORGAN*/
 /**************************/
