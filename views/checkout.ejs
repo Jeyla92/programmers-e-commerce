@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-  <html lang="sv">
+<html lang="sv">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="/stylesheets/checkout.css" />
   </head>
 
@@ -14,94 +21,88 @@
         <h1>Programmers</h1>
       </div>
       <div class="search-container">
-        <input type="text" id="search-bar" placeholder="Sök produkter">
+        <input type="text" id="search-bar" placeholder="Sök produkter" />
         <button id="search-button">Sök</button>
         <ul id="suggestions-list" class="suggestions"></ul>
       </div>
       <div class="icon-links">
-          <a href="#" class="icon-link">
-            <i class="fas fa-store"></i> Hitta butik
-          </a>
-          <a href="#" class="icon-link">
-            <i class="fas fa-sign-in-alt"></i> Logga in
-          </a>
-          <a href="#" class="icon-link">
-            <i class="fas fa-shopping-cart"></i> Kundvagn
-          </a>
+        <a href="#" class="icon-link">
+          <i class="fas fa-store"></i> Hitta butik
+        </a>
+        <a href="#" class="icon-link">
+          <i class="fas fa-sign-in-alt"></i> Logga in
+        </a>
+        <a href="#" class="icon-link">
+          <i class="fas fa-shopping-cart"></i> Kundvagn
+        </a>
       </div>
     </header>
 
-
     <!-- *****************************************************************************MORGAN -->
-    <!-- Morgans Del--> 
+    <!-- Morgans Del-->
     <main class="grid-container">
       <!-- Formulär och betalningsdetaljer -->
       <section class="left-column">
-          <div class="form-container">
-              <h2>Orderformulär</h2>
-              <form id="orderForm">
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="namn">Namn</label>
-                          <input type="text" id="namn" name="namn" required>
-                      </div>
-                      <div class="form-group">
-                          <label for="efternamn">Efternamn</label>
-                          <input type="text" id="efternamn" name="efternamn" required>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="adress">Adress</label>
-                          <input type="text" id="adress" name="adress" required>
-                      </div>
-                      <div class="form-group">
-                          <label for="postnummer">Postnummer</label>
-                          <input type="text" id="postnummer" name="postnummer" required>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="stad">Stad</label>
-                          <input type="text" id="stad" name="stad" required>
-                      </div>
-                      <div class="form-group">
-                          <label for="notering">Notering</label>
-                          <textarea id="notering" name="notering"></textarea>
-                      </div>
-                  </div>
-                  <button type="submit" class="submit-btn">Skicka order</button>
-              </form>
-          </div>
+        <div class="form-container">
+          <h2>Orderformulär</h2>
+          <form id="orderForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="namn">Namn</label>
+                <input type="text" id="namn" name="namn" required />
+              </div>
+              <div class="form-group">
+                <label for="efternamn">Efternamn</label>
+                <input type="text" id="efternamn" name="efternamn" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="adress">Adress</label>
+                <input type="text" id="adress" name="adress" required />
+              </div>
+              <div class="form-group">
+                <label for="postnummer">Postnummer</label>
+                <input type="text" id="postnummer" name="postnummer" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="stad">Stad</label>
+                <input type="text" id="stad" name="stad" required />
+              </div>
+              <div class="form-group">
+                <label for="notering">Notering</label>
+                <textarea id="notering" name="notering"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">Skicka order</button>
+          </form>
+        </div>
 
-          <!-- Betalningsdetaljer -->
-          <div class="payment-section">
-              <h2>Betalningsdetaljer</h2>
-              <p>Betala enkelt med Swish genom att skanna QR-koden nedan:</p>
-              <img src="images/swish.png" alt="Swish QR-kod" class="qr-code">
-              <p><strong>Telefonnummer:</strong> 079-201 53 17</p>
-          </div>
+        <!-- Betalningsdetaljer -->
+        <div class="payment-section">
+          <h2>Betalningsdetaljer</h2>
+          <p>Betala enkelt med Swish genom att skanna QR-koden nedan:</p>
+          <img src="images/swish.png" alt="Swish QR-kod" class="qr-code" />
+          <p><strong>Telefonnummer:</strong> 079-201 53 17</p>
+        </div>
       </section>
 
       <!-- Orderöversikt -->
       <aside class="order-summary">
-          <h2>Orderöversikt</h2>
-          <p><strong>Produkt:</strong> Lenovo</p>
-          <p><strong>Pris:</strong> 5500 KR</p>
-          <p class="total"><strong>Summa totalt:</strong> 5500 KR</p>
+        <h2>Orderöversikt</h2>
+        <p><strong>Produkt:</strong> Lenovo</p>
+        <p><strong>Pris:</strong> 5500 KR</p>
+        <p class="total"><strong>Summa totalt:</strong> 5500 KR</p>
       </aside>
-  </main>
-
-
+    </main>
 
     <!-- *****************************************************************************MORGAN -->
-
 
     <script src="/javascripts/homepage.js"></script>
     <script src="/javascripts/checkout.js"></script>
   </body>
-
-
 
   <footer>
     <div class="footer-links">
@@ -133,6 +134,4 @@
     </div>
     <p class="copyright">Copyright &copy; 2024 by Programmers AJM</p>
   </footer>
-
 </html>
- 
