@@ -23,11 +23,12 @@ header {
   width: 100%;
 }
 
-.logo h1 {
+.logo h1 a {
   margin: 0;
   color: #003366;
   font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .search-container {
@@ -144,6 +145,70 @@ header {
 /* SEARCH GALLERY */
 /**************************/
 
+.galleri {
+  margin-left: 250px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.product {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.pris {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.add-to-cart {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #85d7f2;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.add-to-cart.added {
+  background-color: #727df7;
+  cursor: pointer;
+  text-decoration: line-through;
+}
 /**************************/
 /* FOOTER */
 /**************************/

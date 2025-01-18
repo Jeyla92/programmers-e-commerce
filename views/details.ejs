@@ -15,6 +15,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
     <link rel="stylesheet" href="/stylesheets/details.css" />
@@ -23,7 +27,7 @@
     <header>
       <div class="header-top">
         <div class="logo">
-          <h1>Programmers</h1>
+          <h1><a href="/">Programmers<a></h1>
         </div>
         <div class="search-container">
           <input type="text" id="search-bar" placeholder="Sök produkter" />
@@ -44,37 +48,128 @@
       </div>
     </header>
 
-    <main class="container">
+    <main class="container-produkt">
       <section class="produkt-info">
-        <img id="produkt-bild" src="../public/macbook.jpg" alt="MacBook" />
-        <h2>MacBook Air M2 CTO 16/256</h2>
-        <p class="pris">11 290 kr</p>
-        <p class="beskrivning">
-          MacBook Air är byggd från grunden runt det nya M2-chippet som ger dig
-          rikligt med kraft i en mindre förpackning. Liquid Retina-skärmen
-          sträcker sig ännu längre än tidigare och ger dig stort visningsutrymme
-          och fantastisk bild.
-        </p>
+        <img src="<%= product.image %>" alt="<%= product.name %>" />
+        <h2><%= product.name %></h2>
+        <p class="pris"><%= product.price %></p>
+        <p class="beskrivning"><%= product.description %></p>
 
         <div class="specifikationer">
           <p><strong>Specifikationer:</strong></p>
           <ul>
-            <li>Apple M2 chip octa-core SoC</li>
-            <li>13.6" Liquid Retina-skärm med True Tone</li>
-            <li>8 GB RAM, 256 GB SSD-lagring</li>
+            <li>Hög prestanda för smidig programmering och utveckling</li>
+            <li>
+              8 GB RAM och 256 GB SSD-lagring för snabb multitasking och massor
+              av utrymme
+            </li>
+            <li>Enastående batteritid som håller hela arbetsdagen</li>
+            <li>Elegant design som kombinerar stil och funktion</li>
           </ul>
         </div>
         <div class="alternativ">
           <label for="färg-alternativ">Färgalternativ:</label>
           <select id="färg-alternativ">
-            <option value="midnight">Midnight</option>
+            <option value="svart">Svart</option>
             <option value="silver">Silver</option>
-            <option value="starlight">Starlight</option>
+            <option value="grå">Grå</option>
+            <option value="blå">Blå</option>
+            <option value="guld">Guld</option>
           </select>
         </div>
+
         <button id="köp-nu">Köp nu</button>
       </section>
     </main>
+
+    <section class="Slides">
+      <h2 class="heading-secondary">Liknande datorer</h2>
+      <div class="slideshow-container">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <!-- Slide 1 -->
+        <div class="slide">
+          <div class="grid-container">
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/acer1.jpg" alt="Acer Aspire 5" />
+              </a>
+              <p class="top">Acer Aspire 5</p>
+              <p class="top-price">5090 :-</p>
+            </div>
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/acer2.jpg" alt="Acer Nitro 5" />
+              </a>
+              <p class="top">Acer Nitro 5</p>
+              <p class="top-price">8095 :-</p>
+            </div>
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/macbook4.jpg" alt="MacBook Pro 16" />
+              </a>
+              <p class="top">Macbook Pro 16</p>
+              <p class="top-price">12700 :-</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="grid-container">
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/asus1.jpg" alt="Acer Swift 3" />
+              </a>
+              <p class="top">Acer Swift 3</p>
+              <p class="top-price">7490 :-</p>
+            </div>
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/asus2.jpg" alt="Acer Chromebook 15" />
+              </a>
+              <p class="top">Acer Chromebook 15</p>
+              <p class="top-price">32000 :-</p>
+            </div>
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/hp2.jpg" alt="HP" />
+              </a>
+              <p class="top">HP Elite Book</p>
+              <p class="top-price">20000 :-</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <div class="grid-container">
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/dell3.jpg" alt="Dell XPS 13" />
+              </a>
+              <p class="top">Dell XPS 13</p>
+              <p class="top-price">12995 :-</p>
+            </div>
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/dell1.jpg" alt="Dell G15" />
+              </a>
+              <p class="top">Dell G15</p>
+              <p class="top-price">11000 :-</p>
+            </div>
+            <div class="grid-item">
+              <a href="#">
+                <img src="/images/macbook3.jpg" alt="MacBook" />
+              </a>
+              <p class="top">Macbook Air</p>
+              <p class="top-price">24500 :-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="review">
       <div class="container">
@@ -95,7 +190,7 @@
         </div>
         <div class="container__right">
           <div class="customers">
-            <img src="images/customer1.jpg" alt="Porträtt av Victor Sjöholm" />
+            <img src="/images/customer1.jpg" alt="Porträtt av Victor Sjöholm" />
             <div class="custom">
               <div class="custom-details">
                 <p>
@@ -116,7 +211,7 @@
 
           <div class="customers">
             <img
-              src="images/customer2.jpg"
+              src="/images/customer2.jpg"
               alt="Porträtt av Maria Torstensson"
             />
             <div class="custom">
@@ -138,7 +233,7 @@
           </div>
 
           <div class="customers">
-            <img src="images/customer3.jpg" alt="Rijad Hamula" />
+            <img src="/images/customer3.jpg" alt="Rijad Hamula" />
             <div class="custom">
               <div class="custom-details">
                 <p>
@@ -159,7 +254,7 @@
           </div>
 
           <div class="customers">
-            <img src="images/customer4.jpg" alt="Porträtt av Mirjam Davis" />
+            <img src="/images/customer4.jpg" alt="Porträtt av Mirjam Davis" />
             <div class="custom">
               <div class="custom-details">
                 <p>
@@ -211,6 +306,6 @@
       </div>
       <p class="copyright">Copyright &copy; 2024 by Programmers AJM</p>
     </footer>
-    <script src="/javascripts/homepage.js"></script>
+    <script src="/javascripts/details.js"></script>
   </body>
 </html>
