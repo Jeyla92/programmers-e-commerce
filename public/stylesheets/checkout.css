@@ -178,12 +178,17 @@ textarea {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  align-self: start; /* Börja på toppen */
+}
+.product-image {
+  width: 100px;
+  height: 80px;
+  border: 1px solid #ccc;
 }
 
 .order-summary h2 {
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
 .order-summary p {
@@ -194,6 +199,16 @@ textarea {
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
+}
+
+.remove-from-cart {
+  background-color: #34516d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 40px;
 }
 
 /****************************************************************MORGAN*/

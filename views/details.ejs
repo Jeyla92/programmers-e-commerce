@@ -41,7 +41,7 @@
           <a href="#" class="icon-link">
             <i class="fa-solid fa-right-to-bracket"></i> Logga in
           </a>
-          <a href="#" class="icon-link">
+          <a href="/checkout" class="icon-link">
             <i class="fa-solid fa-cart-shopping"></i> Kundvagn
           </a>
         </div>
@@ -78,7 +78,7 @@
           </select>
         </div>
 
-        <button id="köp-nu">Köp nu</button>
+        <button class="add-to-cart" data-id="<%= product.id %>">Lägg i varukorgen</button>
       </section>
     </main>
 
@@ -307,5 +307,6 @@
       <p class="copyright">Copyright &copy; 2024 by Programmers AJM</p>
     </footer>
     <script src="/javascripts/details.js"></script>
+    <script src="/javascripts/detailsBuy.js"></script>
   </body>
 </html>

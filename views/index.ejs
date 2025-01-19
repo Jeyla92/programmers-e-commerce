@@ -40,7 +40,7 @@
         <a href="#" class="icon-link">
             <i class="fa-solid fa-right-to-bracket"></i> Logga in
         </a>
-        <a href="#" class="icon-link">
+        <a href="/checkout" class="icon-link">
             <i class="fa-solid fa-cart-shopping"></i> Kundvagn
         </a>
     </div>
@@ -147,22 +147,22 @@
 
 <section class="gallery">
     <div class="galleri">
-        <% products.forEach(product => { 
-            const today = new Date(); 
-            const publishedDate = new Date(product.published_date); 
-            const isNew = ((today - publishedDate) / (1000 * 60 * 60 * 24)) < 7; 
+        <% products.forEach(product => {
+            const today = new Date();
+            const publishedDate = new Date(product.published_date);
+            const isNew = ((today - publishedDate) / (1000 * 60 * 60 * 24)) < 7;
         %>
-            <div class="product">
-                <% if (isNew) { %>
-                    <span class="badge">Nyhet</span>
-                <% } %>
-                <a href="/details/<%= product.id %>">
-                    <img src="<%= product.image %>" alt="<%= product.name %>" />
-                </a>
-                <p class="titel"><%= product.name %></p>
-                <p class="pris"><%= product.price %></p>
-                <button class="add-to-cart">Lägg i varukorg</button>
-            </div>
+        <div class="product">
+            <% if (isNew) { %>
+                <span class="badge">Nyhet</span>
+            <% } %>
+            <a href="/details/<%= product.id %>">
+                <img src="<%= product.image %>" alt="<%= product.name %>"/>
+            </a>
+            <p class="titel"><%= product.name %></p>
+            <p class="pris"><%= product.price %></p>
+            <button class="add-to-cart" data-id="<%= product.id %>">Lägg i varukorg</button>
+        </div>
         <% }) %>
     </div>
 </section>
@@ -330,6 +330,7 @@
     </div>
     <p class="copyright">Copyright &copy; 2024 by Programmers AJM</p>
 </footer>
+<script src="/javascripts/cart.js"></script>
 <script src="/javascripts/homepage.js"></script>
 </body>
 </html>
