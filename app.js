@@ -7,10 +7,10 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const detailsRouter = require("./routes/details");
-const searchRouter = require("./routes/search");
+const search = require("./api/search");
 const checkoutRouter = require("./routes/checkout");
-const getProductsApi = require("./routes/api/getProductsApi");
-const postFiltreringApi = require("./routes/api/postFiltreringApi");
+const getProductsApi = require("./api/getProductsApi");
+const postFiltreringApi = require("./api/postFiltreringApi");
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/details", detailsRouter);
-app.use("/search", searchRouter);
+app.get("/search", search);
 app.use("/checkout", checkoutRouter);
 app.use("/api", getProductsApi);
 app.use("/api", postFiltreringApi);

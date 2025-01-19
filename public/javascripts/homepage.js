@@ -7,41 +7,76 @@ const searchInput = document.getElementById("search-bar"); /* implementera logik
 const suggestionsList = document.getElementById("suggestions-list"); /* implementera logik för att hantera användarens inmatning och visa relevanta förslag. */
 
 let currentIndex = 0;
- 
-/* Jeyla (sökrutan) */
-const suggestions = [
-  "MacBook Pro M2",
-  "Dell XPS 17",
-  "Lenovo ThinkPad X1",
-  "HP Spectre x360",
-  "Asus ROG Zephyrus G14",
-  "Apple iPhone 15",
-  "Samsung Galaxy S23",
-  "Sony WH-1000XM5",
-  "Bose QuietComfort Earbuds",
-  "Google Pixel 8"
-];     /*exempel på data att söka i */
 
-searchInput.addEventListener("input", function () {
-  const inputValue = searchInput.value.toLowerCase();
-  suggestionsList.innerHTML = ""; // Rensa tidigare förslag
+  // Function to fetch and display search results
+  // Function to fetch and display search suggestions
+  const fetchSuggestions = async (query) => {
+    try {
+      const response = await fetch(`/search?q=${encodeURIComponent(query)}`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch suggestions");
+      }
 
-  if (inputValue) {
-      const filteredSuggestions = suggestions.filter(item =>
-          item.toLowerCase().includes(inputValue)
-      );
+      const data = await response.json(); // Assuming backend returns JSON with suggestions
+      displaySuggestions(data);
+    } catch (error) {
+      console.error("Error fetching suggestions:", error);
+    }
+  };
 
-      filteredSuggestions.forEach(item => {
-          const listItem = document.createElement("li");
-          listItem.textContent = item;
-          listItem.addEventListener("click", () => {
-              searchInput.value = item; // Fyll i sökrutan
-              suggestionsList.innerHTML = ""; // Stäng förslagslistan
-          });
-          suggestionsList.appendChild(listItem);
+  // Function to render suggestions
+  const displaySuggestions = (products) => {
+    suggestionsList.innerHTML = ""; // Clear previous suggestions
+
+    if (products.length === 0) {
+      suggestionsList.innerHTML = `<li>Inga produkter matchade din sökning.</li>`;
+      return;
+    }
+
+    products.forEach((product) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = product.name;
+      listItem.addEventListener("click", () => {
+        // Fill input with selected suggestion and navigate
+        searchInput.value = product.name;
+        window.location.href = `/details/${encodeURIComponent(product.id)}`;
       });
-  }
-});
+      suggestionsList.appendChild(listItem);
+    });
+  };
+
+  // Event listener for input field
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim();
+    if (query) {
+      fetchSuggestions(query);
+    } else {
+      suggestionsList.innerHTML = ""; // Clear suggestions when input is empty
+    }
+  });
+
+  // Close suggestions list when clicking outside
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".search-container")) {
+      suggestionsList.innerHTML = "";
+    }
+  });
+
+
+
+
+  // Optional: Trigger search on "Enter" key press
+  searchInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        fetchSearchResults(query);
+      }
+    }
+  });
+
+
 
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".search-container")) {

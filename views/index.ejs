@@ -29,9 +29,11 @@
         <h1>Programmers</h1>
     </div>
     <div class="search-container">
-        <input type="text" id="search-bar" placeholder="Sök produkter">
+        <form action="/search" method="get">
+            <input type="text" id="search-bar" name="q" placeholder="Sök produkter" required>
+            <button type="submit" id="search-button">Sök</button>
+        </form>
         <ul id="suggestions-list" class="suggestions"></ul>
-        <button id="search-button">Sök</button>
     </div>
     <div class="icon-links">
         <a href="#" class="icon-link">
